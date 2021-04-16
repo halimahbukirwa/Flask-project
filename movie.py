@@ -26,9 +26,9 @@ def index():
  def get_movie():
      return jsonify({'Movies':Movies})
 
-# @app.route("/Movies/<int:Movie_id>",methods=['GET'])
-# def get_movieId(Movie_id):
-#     return jsonify({'Movies':Movies[Movie_id]})
+ @app.route("/Movies/<int:Movie_id>",methods=['GET'])
+ def get_movieId(Movie_id):
+     return jsonify({'Movies':Movies[Movie_id]})
 
 # @app.route("/Movies/<string:Title>",methods=['GET'])
 # def get_movieTitle(Title):
