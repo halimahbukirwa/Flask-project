@@ -58,13 +58,13 @@ def index():
      return jsonify({'Movies':Movies['Movie_id']})
 
 
-# @app.route("/Movies/<string:Movie_id>",methods=['DELETE'])
-# def delete():
-#     Movies.remove(Movies[Movie_id])
-#     return jsonify({'result':True})
+ @app.route("/Movies/<string:Movie_id>",methods=['DELETE'])
+ def delete():
+     Movies.remove(Movies[Movie_id])
+     return jsonify({'result':True})
 
 
-# if __name__ == "__main__":
+ if __name__ == "__main__":
 
-#     app.run(debug=True)
+     app.run(debug=True)
 
