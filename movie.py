@@ -52,10 +52,10 @@ def index():
      Movies.append(Movie)
      return jsonify({'Created':Movie})
 
-# @app.route("/Movies/<string:Movie_id>",methods=['PUT'])
-# def updateMovie(Movie_id):
-#     Movies['Movie_id']['Genre'] = "Christian Drama"
-#     return jsonify({'Movies':Movies['Movie_id']})
+ @app.route("/Movies/<string:Movie_id>",methods=['PUT'])
+ def updateMovie(Movie_id):
+     Movies['Movie_id']['Genre'] = "Christian Drama"
+     return jsonify({'Movies':Movies['Movie_id']})
 
 
 # @app.route("/Movies/<string:Movie_id>",methods=['DELETE'])
