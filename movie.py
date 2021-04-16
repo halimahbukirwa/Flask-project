@@ -42,15 +42,15 @@ def index():
  def get_movieDuration(Duration):
      return jsonify({'Movies':Movies[Duration]})
 
-# @app.route("/Movies",methods=['POST'])
-# def create():
-#     Movie = {'Title':"War Room", 
-#               'Movie_id':"4",
-#               'Duration':"2hrs",
-#               'Genre':"Drama"
-#               }
-#     Movies.append(Movie)
-#     return jsonify({'Created':Movie})
+ @app.route("/Movies",methods=['POST'])
+ def create():
+     Movie = {'Title':"War Room", 
+               'Movie_id':"4",
+               'Duration':"2hrs",
+               'Genre':"Drama"
+               }
+     Movies.append(Movie)
+     return jsonify({'Created':Movie})
 
 # @app.route("/Movies/<string:Movie_id>",methods=['PUT'])
 # def updateMovie(Movie_id):
