@@ -38,9 +38,9 @@ def index():
  def get_movieGenre(Genre):
      return jsonify({'Movies':Movies[Genre]})
 
-# @app.route("/Movies/<string:Duration>",methods=['GET'])
-# def get_movieDuration(Duration):
-#     return jsonify({'Movies':Movies[Duration]})
+ @app.route("/Movies/<string:Duration>",methods=['GET'])
+ def get_movieDuration(Duration):
+     return jsonify({'Movies':Movies[Duration]})
 
 # @app.route("/Movies",methods=['POST'])
 # def create():
