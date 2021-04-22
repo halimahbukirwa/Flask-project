@@ -22,6 +22,10 @@ Movies = [{'Title':"Sonic The Hedgehog",
 def index():
     return "Welcome To My Movie Library"
 
+@app.route("/<name>")
+def user(name):
+    return f"Hello {name}!"
+
 @app.route("/Movies",methods=['GET'])
 def get_movie():
     return jsonify({'Movies':Movies})
@@ -44,7 +48,7 @@ def get_movieDuration(Duration):
     
 @app.route("/Admin")
 def admin():
-    return redirect(url_for("index"))
+    return redirect(url_for("index "))
     
 @app.route("/Movies",methods=['POST'])
 def create():
