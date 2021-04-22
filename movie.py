@@ -1,4 +1,4 @@
-from flask import Flask , jsonify
+from flask import Flask , jsonify,redirect,url_for
 app = Flask(__name__)
 
 
@@ -41,7 +41,11 @@ def get_movieGenre(Genre):
 @app.route("/Movies/<string:Duration>",methods=['GET'])
 def get_movieDuration(Duration):
     return jsonify({'Movies':Movies[Duration]})
-
+    
+@app.route("/Admin")
+def admin():
+    return redirect(url_for("index"))
+    
 @app.route("/Movies",methods=['POST'])
 def create():
     Movie = {'Title':"War Room", 
